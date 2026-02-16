@@ -34,7 +34,7 @@
 
     <groupId>org.wrensecurity.wrenicf.misc</groupId>
     <artifactId>dbcommon</artifactId>
-    <version>1.5.3.0-SNAPSHOT</version>
+    <version>1.5.3.0</version>
     <packaging>bundle</packaging>
 
     <name>Database Common</name>
@@ -46,7 +46,7 @@
         <url>https://github.com/WrenSecurity/wrenicf-dbcommon</url>
         <connection>scm:git:git://github.com/WrenSecurity/wrenicf-dbcommon.git</connection>
         <developerConnection>scm:git:git@github.com:WrenSecurity/wrenicf-dbcommon.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>1.5.3.0</tag>
     </scm>
 
     <distributionManagement>
