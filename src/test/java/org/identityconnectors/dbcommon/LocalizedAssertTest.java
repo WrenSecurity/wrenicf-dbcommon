@@ -57,8 +57,8 @@ public class LocalizedAssertTest {
      */
     @Test
     public final void testAssertNotNull() {
-        Integer i = testee.assertNotNull(new Integer(1), "i");
-        Assert.assertEquals(new Integer(1), i);
+        Integer i = testee.assertNotNull(Integer.valueOf(1), "i");
+        Assert.assertEquals(Integer.valueOf(1), i);
         try {
             i = testee.assertNotNull(null, "i");
             Assert.fail("Must fail for null argument");
@@ -77,7 +77,7 @@ public class LocalizedAssertTest {
         Integer i = testee.assertNull(null, "i");
         Assert.assertNull(i);
         try {
-            i = testee.assertNull(new Integer(1), "i");
+            i = testee.assertNull(Integer.valueOf(1), "i");
             Assert.fail("Must fail for not null argument");
         } catch (RuntimeException e) {
             Assert.assertEquals("Argument [i] must be null", e.getMessage());

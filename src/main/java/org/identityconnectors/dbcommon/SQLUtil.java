@@ -429,7 +429,7 @@ public final class SQLUtil {
         } catch (IllegalArgumentException e) {
             // Wrong string, cloud be a string number
             try {
-                parsedDate = new java.sql.Date(new Long(param));
+                parsedDate = new java.sql.Date(Long.parseLong(param));
             } catch (NumberFormatException expected) {
                 // Locale parsed date, possible lost of precision
                 try {
@@ -457,7 +457,7 @@ public final class SQLUtil {
         } catch (IllegalArgumentException e) {
             // Wrong string, cloud be a number
             try {
-                parsedTms = new java.sql.Timestamp(new Long(param));
+                parsedTms = new java.sql.Timestamp(Long.parseLong(param));
             } catch (NumberFormatException expected) {
                 // Locale parsed date, possible lost of precision
                 try {

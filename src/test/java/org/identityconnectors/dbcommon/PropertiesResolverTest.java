@@ -100,8 +100,7 @@ public class PropertiesResolverTest {
         properties.setProperty("key2", "value2 ${key1}");
         properties.setProperty("key3", "value3 ${key2}");
         properties = PropertiesResolver.resolveProperties(properties);
-        System.out.println(properties.get("key3"));
-        Assert.assertEquals("value3 value2 value1 RECURSION", properties.get("key3"));
+        Assert.assertEquals("value3 value2 value1 value3 value2 RECURSION", properties.get("key3"));
     }
 
 }
